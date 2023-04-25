@@ -10,6 +10,7 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import HomePage from './pages/HomePage/HomePage';
 
 // Comp definition
 function App() {
@@ -18,8 +19,8 @@ function App() {
     <div>
       <Header></Header>
 
-      <main className='mt-5'>
-        <h1>Success!</h1>
+      <main className='container mt-5'>
+        <HomePage />
       </main>
 
       <Footer />

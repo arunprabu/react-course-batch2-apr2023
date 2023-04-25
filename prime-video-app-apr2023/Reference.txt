@@ -146,7 +146,7 @@ Components
       
       1.1 Functional Component with Named Function [DONE]
       1.2 Functional Component with Anonymous Function [DONE]
-      1.3 Functional Component with Arrow Function [DONE]
+      1.3 Functional Component with Arrow Function [DONE] [RECOMMENDED]
 
   2. Class Components  (should be created in src/containers/)
 
