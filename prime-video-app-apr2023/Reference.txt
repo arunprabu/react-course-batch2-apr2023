@@ -1,0 +1,124 @@
+Webapps 
+----
+  1. Server Side Rendering Apps (SSR) / Traditional Webapps 
+      * Pages will Refresh 
+
+      Arch 
+      ----
+        1 Server -- PORT 8080 -- localhost:8080
+        Response: HTML, CSS, JS + Data
+
+      Codebase 
+      -----
+        HTML, CSS, JS + Back End + DB Queries 
+
+      Adv 
+      ----
+        
+      Disadv
+      -----
+        1. Server has to do the heavy-lifting of going thru html, css, js 
+        2. Slower Webapps 
+        3. Higher Bandwidth consumption
+        4. Expensive 
+        5. Offers Bad User Experience
+
+  2. Client Side Rendering Apps (CSR) / Modern Webapps 
+      * Pages will NOT Refresh 
+
+      CSR = SPA + RESTful API 
+
+      Arch 
+      ----
+        2 Servers 
+          1 Front End App  -- Port 3000  -- localhost:3000 (end-user facing)
+            Response: HTML, CSS, JS, (Wait for data in JSON)
+
+          1 Back End App -- Port 8080  --- localhost:8080 
+            Response: Data (JSON)
+
+      Codebase 
+      -----
+        1 Front End App a.k.a Single Page Apps (SPA)
+          HTML, CSS, JS  
+
+        1 Back End App a.k.a RESTful API 
+          Back End + DB Query 
+
+      Adv
+      ----
+        1. Workload is shared between two servers and also client 
+        2. Faster Webapps 
+        3. Lesser Bandwidth consumption
+        4. Not Expensive 
+        5. Offers Better User Experience
+
+      Disadv
+      -----
+      
+
+Single Page App (SPA) Characteristics (7)
+---------------
+  1. Pages should Not Refresh 
+  2. URL should be changed 
+  3. History should be maintained without Page Refresh 
+  4. Header and Footer should be intact. 
+  5. The section in between header and footer should be updated 
+  6. Active Menu should be set 
+  7. Page Title should also be changed 
+
+  SPA Frameworks / Libraries 
+  ---------------------------
+    #1 React JS (Library) 
+    #2 VueJS (Framework)
+    #3 Angular (Framework)
+
+==========
+
+Thinking in React
+----------
+  0. Find out the number of components 
+  1. Break the UI into component hierarchy 
+  2. ...
+  3. ...
+  
+
+Components
+----------
+  1. Functional Components
+      * Coded with JS functions 
+      
+      1.1 Functional Component with Named Function [DONE]
+      1.2 Functional Component with Anonymous Function [DONE]
+      1.3 Functional Component with Arrow Function [DONE]
+
+  2. Class Components 
+
+
+Project Structure
+-----------
+  src/
+    components/
+      Header/
+        Header.js
+        Header.css 
+        Header.test.js 
+      Footer/
+        Footer.js 
+        Footer.css  
+        Footer.test.js 
+      MenuList/
+        MenuList.js 
+        MenuList.css 
+        MenuList.test.js 
+
+JSX Limitations
+---
+  * will look like HTML but not HTML
+  * You can use all html tags. But tags must be closed. 
+  * class should become className
+
+
+Integrating Third party packages / tools 
+----------
+  

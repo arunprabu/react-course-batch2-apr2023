@@ -1,0 +1,48 @@
+NodeJS Ecosystem
+----------------
+  Server Marketplace: npmjs.com
+  Client: npm that is installed in computer
+  
+  Dependencies
+  ----
+    1. Project Dependencies
+        * the packages that are needed for the app's functionality to work 
+
+        examples: dropzone, datatables.net, bootstrap, jquery, react 
+
+        npm i dropzone
+        npm i dropzone --save 
+        npm i dropzone -S 
+
+        npm update dropzone 
+        npm uninstall dropzone
+
+        In package.json, you can find the installed Project Dependencies here,
+        "dependencies": {
+          "dropzone": "6.0.0-beta.2"
+        },
+
+    2. Dev Dependencies 
+        * the packages that are needed for the app to be developed
+        * not needed for the functionality 
+        * needed during the development 
+
+        examples: webpack, sass, less, typescript
+
+        npm i webpack --save-dev
+        npm i webpack -D 
+
+        npm update webpack -D 
+        npm uninstall webpack -D 
+
+        In package.json, you can find the installed Dev Dependencies here,
+        "devDependencies": {
+          "webpack": "5.79.0"
+        }
+
+
+1. File Walkthru 
+2. App's Architecture
+3. How to start the server? 
+4. How React Apps are getting started?
+
