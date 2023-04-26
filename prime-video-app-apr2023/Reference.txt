@@ -76,7 +76,6 @@ Single Page App (SPA) Characteristics (7)
 ==========
 
 
-
 Naming Conventions & Casing 
 ----
   Casing Types 
@@ -169,7 +168,14 @@ Project Structure
         MenuList.test.js 
     containers/
     pages/       (or features/)
-
+      HomePage/
+        LatestVideo/  
+          LatestVideo.js
+        TrendingVideoList/
+          TrendingVideoList.js 
+        HomePage.js 
+      AboutPage/
+      
 
 
 JSX Limitations
@@ -202,26 +208,17 @@ Sharing the data between components a.k.a Cross Component Communication
       Using Props with callback function and event
 
   3. Any to Any Component Communication
-      3.1 Using React Context API (or) [after the year 2019]
+      3.1 Using React Context API (or) [after the year 2019 - ReactJS v 16.8]
       3.2 Using ReduxJS / Flux / MobX
-
-
-Props 
-----
-
-
-
-
-
 
 
 
 Concepts
 ---
-  data binding
+  data binding [DONE]
     variables 
 
-  props 
+  props [DONE]
   states 
   events 
   lists and keys 
