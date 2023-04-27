@@ -175,7 +175,7 @@ Project Structure
           TrendingVideoList.js 
         HomePage.js 
       AboutPage/
-      
+
 
 
 JSX Limitations
@@ -219,10 +219,10 @@ Concepts
     variables 
 
   props [DONE]
-  states 
-  events 
-  lists and keys 
-  conditionals 
+  states [DONE]
+  events  [DONE -- Pending a bit]
+  lists and keys [DONE]
+  conditionals [DONE]
 
 
 

@@ -1,9 +1,10 @@
 // rafce
 const LatestVideo = (props) => { 
-  // receiving the data from parent comp in props
-  // props are objects
-  // props are read-only
-  // props can also have children
+  /* receiving the data from parent comp in props
+    props are objects
+    props are read-only
+    props can also have children
+  */
   console.log(props);
 
   return (

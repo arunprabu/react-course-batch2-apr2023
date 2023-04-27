@@ -1,4 +1,5 @@
 import LatestVideo from "./LatestVideo/LatestVideo";
+import RecommendedVideoList from "./RecommendedVideoList/RecommendedVideoList";
 import TrendingVideoList from "./TrendingVideoList/TrendingVideoList";
 
 const HomePage = () => {
@@ -35,6 +36,14 @@ const HomePage = () => {
         <hr />
         <h2>Trending Videos | Class Comp, States and Events Demo</h2>
         <TrendingVideoList />
+      </div>
+
+      <div className="row mt-5">
+        <hr />
+        <h2>Recommended Video List | 
+          States, Events, Lists and Keys, 
+          Conditionals Demo</h2>
+        <RecommendedVideoList />
       </div>
     </div>
   );
