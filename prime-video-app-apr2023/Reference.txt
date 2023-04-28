@@ -231,11 +231,17 @@ Concepts
   conditionals [DONE]
 
   [PENDING]
-  forms 
-  LifeCycle Hooks
-  Styles 
-  Hooks 
+  forms [1 hour]
+  Styles [.5 hour]
+  LifeCycle Hooks [2 hours ]
+  Hooks [12 hours]
+  Adv react concepts [4-5 hours]
+  AJAX calls using fetch, axios [1 hour]
+  Unit Testing [20-24 hours]
+  Build and Deployement [.5 hour]
   and many more...
+
+  Redux 
   
 
 ----
