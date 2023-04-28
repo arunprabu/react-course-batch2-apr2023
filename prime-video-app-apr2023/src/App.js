@@ -19,7 +19,7 @@ function App() {
     <div>
       <Header></Header>
 
-      <main className='container mt-5'>
+      <main className="container mt-5">
         <HomePage />
       </main>
 

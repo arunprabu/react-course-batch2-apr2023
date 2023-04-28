@@ -35,7 +35,23 @@ class RecommendedVideoList extends Component {
     ],
   };
 
+  // event handler method
+  handleManageWatchlist( index ){
+    console.log(this);
+    console.log(index);
+    // duplicating videos array from state
+    // Working with State Immutably
+    const duplicateVideos = [...this.state.videos];
+    duplicateVideos[index].isInWatchlist =
+      !duplicateVideos[index].isInWatchlist;
+   
+    this.setState({
+      videos: duplicateVideos,
+    });
+  }
+
   render() {
+    console.log('Rendering');
     // Conditional Rendering
     if (!Array.isArray(this.state.videos) || this.state.videos?.length === 0) {
       return (
@@ -46,10 +62,9 @@ class RecommendedVideoList extends Component {
     }
 
     // ideal place for all comp specific transformations
-    // loop thru -- a.k.a lists
+    // loop thru -- a.k.a lists in react
     let videoList = null;
     videoList = this.state.videos.map((video, index) => {
-      console.log('Inside map')
       // console.log(video);
       return (
         <div className="col-md-3" key={video.id}>
@@ -70,6 +85,7 @@ class RecommendedVideoList extends Component {
                 <button
                   type="button"
                   className="btn btn-success btn-sm"
+                  onClick={this.handleManageWatchlist.bind(this, index)}
                 >
                   {/* conditional rendering in JSX */}
                   {video.isInWatchlist ? "In Watchlist" : "Add to Watchlist"}

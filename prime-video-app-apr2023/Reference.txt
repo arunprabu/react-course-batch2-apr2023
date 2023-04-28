@@ -142,12 +142,19 @@ Components
 ----------
   1. Functional Components  (should be created in src/components/)
       * Coded with JS functions 
-      
+      * were called as Dumb components / presentational components / stateless components (before 2019 - react v16.8)
+      * after 2019 -- no longer called as dumb/presentational/stateless 
+      * from react v 16.8 -- we can have fn components -- via hooks concepts
+
       1.1 Functional Component with Named Function [DONE]
       1.2 Functional Component with Anonymous Function [DONE]
       1.3 Functional Component with Arrow Function [DONE] [RECOMMENDED]
 
   2. Class Components  (should be created in src/containers/)
+      * code as JS class but it must extend React Component class 
+      * were called as Smart Components / containers / stateful components (before 2019 - react v16.8)
+      * after 2019 -- no longer called as smart/stateful -- because both type of comp can have state 
+      * can have LifeCycle hooks 
 
 
 Project Structure
@@ -212,7 +219,6 @@ Sharing the data between components a.k.a Cross Component Communication
       3.2 Using ReduxJS / Flux / MobX
 
 
-
 Concepts
 ---
   data binding [DONE]
@@ -220,9 +226,19 @@ Concepts
 
   props [DONE]
   states [DONE]
-  events  [DONE -- Pending a bit]
+  events  [DONE]
   lists and keys [DONE]
   conditionals [DONE]
+
+  [PENDING]
+  forms 
+  LifeCycle Hooks
+  Styles 
+  Hooks 
+  and many more...
+  
+
+----
 
 
 
