@@ -1,5 +1,6 @@
 import LatestVideo from "./LatestVideo/LatestVideo";
 import RecommendedVideoList from "./RecommendedVideoList/RecommendedVideoList";
+import Subscription from "./Subscription/Subscription";
 import TrendingVideoList from "./TrendingVideoList/TrendingVideoList";
 
 const HomePage = () => {
@@ -45,6 +46,13 @@ const HomePage = () => {
           Conditionals Demo</h2>
         <RecommendedVideoList />
       </div>
+
+      <div className="row mt-5">
+        <hr/>
+        <h2>Styling in React JS - Demo</h2>
+        <Subscription/>
+      </div>
+
     </div>
   );
 };

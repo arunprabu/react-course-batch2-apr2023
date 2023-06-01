@@ -8,7 +8,7 @@
  */
 import MenuList from '../MenuList/MenuList';
 
-const Footer = function () {
+const Footer = function() {
   const copyrightYear = 2023;
   const developerName = 'Arun';
   

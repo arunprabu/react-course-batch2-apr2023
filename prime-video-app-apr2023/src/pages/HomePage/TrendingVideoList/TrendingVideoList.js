@@ -1,4 +1,11 @@
 // Class Component and states demo
+/* skeleton of class comp 
+  * must import Component class from react
+  * our comp class must inherit React Component class
+  * must have render method 
+    * must return JSX
+*/
+
 import { Component } from "react";
 
 // must inherit React.Component class

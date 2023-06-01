@@ -68,7 +68,7 @@ class RecommendedVideoList extends Component {
       // console.log(video);
       return (
         <div className="col-md-3" key={video.id}>
-          <div className="card">
+          <div className="card" >
             <img
               src={video.thumbnailUrl}
               className="card-img-top"

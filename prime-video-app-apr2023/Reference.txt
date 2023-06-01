@@ -180,9 +180,12 @@ Project Structure
           LatestVideo.js
         TrendingVideoList/
           TrendingVideoList.js 
+        RecommendedVideoList/
+          RecommendedVideoList.js
+        Subscription/
+          Subscription.js 
         HomePage.js 
       AboutPage/
-
 
 
 JSX Limitations
@@ -208,10 +211,10 @@ Data Binding
 
 Sharing the data between components a.k.a Cross Component Communication
 ------
-  1. Parent to Child Component Communication
-      using Props 
+  1. Parent to Child Component Communication [DONE]
+      using Props
 
-  2. Child to Parent Component Communication
+  2. Child to Parent Component Communication [TODO]
       Using Props with callback function and event
 
   3. Any to Any Component Communication
@@ -231,18 +234,28 @@ Concepts
   conditionals [DONE]
 
   [PENDING]
-  forms [1 hour]
+  
   Styles [.5 hour]
   LifeCycle Hooks [2 hours ]
+  Routing[~1 hour]
+  forms [1 hour]
+  
   Hooks [12 hours]
   Adv react concepts [4-5 hours]
+    .... 
+    HOC 
+    Fragments 
+    StrictMode 
+    Debugging & Error Boundary
   AJAX calls using fetch, axios [1 hour]
   Unit Testing [20-24 hours]
-  Build and Deployement [.5 hour]
+  Build and Deployement [~5 hour]
+    Code-Splitting
+    Lazy Loading 
   and many more...
 
   Redux 
-  
+
 
 ----
 
