@@ -1,4 +1,8 @@
 /* have the comp name as prefix for css classes */
-.subscription-info {
-  color: red;
+.subscription .subscription-info {
+  color: green;
+  background-color: rgb(95, 95, 64);
+  border: solid 3px green;
+  padding: 20px;
+  border-radius: 10px;
 }
