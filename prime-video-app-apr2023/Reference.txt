@@ -154,7 +154,7 @@ Components
       * code as JS class but it must extend React Component class 
       * were called as Smart Components / containers / stateful components (before 2019 - react v16.8)
       * after 2019 -- no longer called as smart/stateful -- because both type of comp can have state 
-      * can have LifeCycle hooks 
+      * can have LifeCycle hooks / methods
 
 
 Project Structure
@@ -228,6 +228,40 @@ Styling in React
       * Our own External css files 
   2. Inline Styles [DONE]
   3. Internal Styles [DONE]
+
+Routing 
+---
+  Step 1: 
+  ---
+    npm i react-router-dom 
+
+  Step 2: 
+  ---
+    Identify the URL's for the Menus of the app 
+
+    Home           http://localhost:3000/
+    About Us       http://localhost:3000/about-us
+    Contact Us     http://localhost:3000/contact-us
+
+  Step 3: 
+  ----
+    Identify the matching component for the URLs 
+
+    http://localhost:3000/              --- HomePage 
+    http://localhost:3000/about-us      --- AboutUsPage 
+    http://localhost:3000/contact-us    --- ContactUsPage 
+
+  Step 4:
+  ---
+    Setting up Menu in MenuList.js 
+
+  Step 5:
+  ---
+    Let's config the routing in App.js 
+
+
+=========================
+
 
 Concepts
 ---

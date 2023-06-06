@@ -1,4 +1,5 @@
 import LatestVideo from "./LatestVideo/LatestVideo";
+import LifeCycleDemo from "./LifeCycleDemo/LifeCycleDemo";
 import RecommendedVideoList from "./RecommendedVideoList/RecommendedVideoList";
 import Subscription from "./Subscription/Subscription";
 import TrendingVideoList from "./TrendingVideoList/TrendingVideoList";
@@ -49,8 +50,14 @@ const HomePage = () => {
 
       <div className="row mt-5">
         <hr/>
-        <h2>Styling in React JS - Demo</h2>
+        <h2>Subscription | Styling in React JS - Demo</h2>
         <Subscription/>
+      </div>
+
+      <div className="row mt-5">
+        <hr/>
+        <h2>Life Cycle Hooks | Demo</h2>
+        <LifeCycleDemo />
       </div>
 
     </div>
