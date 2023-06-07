@@ -1,5 +1,6 @@
 import LatestVideo from "./LatestVideo/LatestVideo";
 import LifeCycleDemo from "./LifeCycleDemo/LifeCycleDemo";
+import MyProfile from "./MyProfile/MyProfile";
 import RecommendedVideoList from "./RecommendedVideoList/RecommendedVideoList";
 import Subscription from "./Subscription/Subscription";
 import TrendingVideoList from "./TrendingVideoList/TrendingVideoList";
@@ -59,6 +60,13 @@ const HomePage = () => {
         <h2>Life Cycle Hooks | Demo</h2>
         <LifeCycleDemo />
       </div>
+
+      <div className="row mt-5">
+        <hr/>
+        <h2>My Profile | Two Way Binding Demo</h2>
+        <MyProfile />
+      </div>
+
 
     </div>
   );

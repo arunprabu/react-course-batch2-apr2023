@@ -10,7 +10,8 @@ class LifeCycleDemo extends Component {
     this.state = {
       isLoading: true,
       isError: false,
-      featureName: ''
+      featureName: '',
+      users: []
     };
   }
 
@@ -27,6 +28,7 @@ class LifeCycleDemo extends Component {
         isLoading: false,
         isError: false,
         featureName: "Understanding LifeCycle Hooks in Detail",
+        users: [{}, {}]
       });
 
       // upon getting error response
@@ -57,10 +59,18 @@ class LifeCycleDemo extends Component {
     document.getElementById("myPara").style.color = 'green';
   }
 
+  componentWillUnmount() {
+    // when the comp's UI goes out of the view --  componentWillUnmount will be called
+    console.log("======= 7. Inside componentWillUnmount ======= ");
+    // ideal place for you to clear the data and remove intervals and timeouts
+    // Perform any necessary cleanup in this method, such as cancelled network requests, or cleaning up any DOM elements created in componentDidMount.
+  }
+
   render() {
     console.log("======2 & 5. Inside Render ========");
     // this render method will be executed immediately after constructor -- Initial Rendering
     // this render method will be called after state updated
+    // NEVER EVER Update state here
     if (this.state.isLoading) {
       return <div className="spinner-border text-success" role="status"></div>;
     }

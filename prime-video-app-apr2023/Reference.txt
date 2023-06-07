@@ -1,3 +1,9 @@
+Browser
+---
+  1. HTML Renderer 
+  2. CSS Parser 
+  3. JS Engine 
+
 Webapps 
 ----
   1. Server Side Rendering Apps (SSR) / Traditional Webapps 
@@ -64,8 +70,9 @@ Single Page App (SPA) Characteristics (7)
   3. History should be maintained without Page Refresh [DONE]
   4. Header and Footer should be intact. [DONE]
   5. The section in between header and footer should be updated [DONE]
-  6. Active Menu should be set [NOT COMPLETED]
-  7. Page Title should also be changed [NOT COMPLETED]
+  6. Active Menu should be set [TODO]
+  7. Page Title should also be changed [TODO]
+      Refer: learn about react-helmet package 
 
   SPA Frameworks / Libraries 
   ---------------------------
@@ -274,21 +281,25 @@ Concepts
   lists and keys [DONE]
   conditionals [DONE]
 
-  [PENDING]
+
   
   Styles [DONE]
-  Routing[~1 hour]
-  Two Way Binding [~20 mins]
-  LifeCycle Hooks [2 hours ]
+  Routing[DONE]
+  LifeCycle Hooks [DONE]
+  Two Way Binding [DONE]
+
+  [PENDING]
   forms [1 hour]
   
-  Hooks [12 hours]
   Adv react concepts [4-5 hours]
     .... 
     HOC 
     Fragments 
     StrictMode 
     Debugging & Error Boundary
+
+  Hooks [12 hours]
+  
   AJAX calls using fetch, axios [1 hour]
   Unit Testing [20-24 hours]
   Build and Deployement [~5 hour]
