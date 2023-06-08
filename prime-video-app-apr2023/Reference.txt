@@ -281,8 +281,6 @@ Concepts
   lists and keys [DONE]
   conditionals [DONE]
 
-
-  
   Styles [DONE]
   Routing[DONE]
   LifeCycle Hooks [DONE]
@@ -292,11 +290,13 @@ Concepts
   forms [1 hour]
   
   Adv react concepts [4-5 hours]
-    .... 
-    HOC 
-    Fragments 
-    StrictMode 
+    Fragments [DONE]
+    StrictMode [DONE]
     Debugging & Error Boundary
+    HOC 
+     
+    
+    Linting 
 
   Hooks [12 hours]
   

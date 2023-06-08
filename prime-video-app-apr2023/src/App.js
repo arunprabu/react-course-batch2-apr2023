@@ -23,7 +23,7 @@ function App() {
       <div>
         <Header></Header>
 
-        <main className="container mt-5">
+        <main className="container mt-5 pt-3">
           {/* Let's config the routing here */}
           <Routes>
             <Route path="/" element={<HomePage />} />
