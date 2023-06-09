@@ -1,5 +1,0 @@
-1. Learn about Integrating bootstrap in CRA Project
-2. Active Menu should be set 
-3. Page Title should also be changed 
-    Refer: learn about react-helmet package 
-

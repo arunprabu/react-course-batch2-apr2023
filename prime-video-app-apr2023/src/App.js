@@ -14,27 +14,32 @@ import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage/HomePage';
 import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
+import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 
 // Comp definition
 function App() {
   // must return JSX
   return (
-    <BrowserRouter>
-      <div>
-        <Header></Header>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <div>
+          <Header></Header>
 
-        <main className="container mt-5 pt-3">
-          {/* Let's config the routing here */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about-us" element={<AboutUsPage />} />
-            <Route path="/contact-us" element={<ContactUsPage />} />
-          </Routes>
-        </main>
+          <main className="container mt-5 pt-3">
+            <ErrorBoundary>
+              {/* Let's config the routing here */}
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about-us" element={<AboutUsPage />} />
+                <Route path="/contact-us" element={<ContactUsPage />} />
+              </Routes>
+            </ErrorBoundary>
+          </main>
 
-        <Footer />
-      </div>
-    </BrowserRouter>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </ErrorBoundary>
   );
 }
 
