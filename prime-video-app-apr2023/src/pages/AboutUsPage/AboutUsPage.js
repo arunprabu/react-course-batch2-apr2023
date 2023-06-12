@@ -2,8 +2,7 @@
 import React from 'react';
 import MockFragment from './MockFragment/MockFragment';
 
-const AboutUsPage = () => {
-  let feature = 'React Advanced Concepts';
+const AboutUsPage = (props) => {
 
   return (
     <div>
@@ -14,7 +13,7 @@ const AboutUsPage = () => {
         <p>Hey</p>
         <p>How are you?</p>
       </MockFragment>
-      <p>{feature()}</p>
+      <p>{props.add()}</p>
     </div>
   );
 }
