@@ -15,6 +15,11 @@ const MenuList = () => {
         </Link>
       </li>
       <li className="nav-item">
+        <Link className="nav-link" to="/hoc-demo">
+          Hoc Demo
+        </Link>
+      </li>
+      <li className="nav-item">
         <Link className="nav-link" to="/about-us">
           About Us
         </Link>

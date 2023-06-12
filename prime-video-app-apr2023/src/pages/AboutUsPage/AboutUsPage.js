@@ -13,7 +13,9 @@ const AboutUsPage = (props) => {
         <p>Hey</p>
         <p>How are you?</p>
       </MockFragment>
-      <p>{props.add()}</p>
+      
+      {/* Demo'ing runtime error thru error boundary */}
+      <p>{props.test()}</p>
     </div>
   );
 }

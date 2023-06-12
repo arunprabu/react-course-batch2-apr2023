@@ -1,1 +1,5 @@
 /* project wide styles */
+
+.red-box {
+  border: solid 4px red;
+}

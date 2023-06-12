@@ -292,12 +292,12 @@ Concepts
   Adv react concepts [4-5 hours]
     Fragments [DONE]
     StrictMode [DONE]
-    Error Boundary
-    Debugging 
-    Linting 
+    Error Boundary [DONE]
     HOC 
-     
-    
+    Todos 
+
+    Debugging 
+    Linting Setup 
 
   Hooks [12 hours]
   
