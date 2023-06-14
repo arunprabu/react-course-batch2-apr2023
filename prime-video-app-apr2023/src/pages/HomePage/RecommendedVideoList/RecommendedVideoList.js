@@ -7,36 +7,36 @@ class RecommendedVideoList extends Component {
     videos: [
       {
         id: 4545665,
-        title: "Ind Vs Aus Cricket 2023",
-        thumbnailUrl: "https://placehold.co/260x220",
-        desc: "Enjoy watching Cricket Series between India and Australia",
-        views: "1.1M",
-        publishedOn: "3 days ago",
-        isInWatchlist: true,
+        title: 'Ind Vs Aus Cricket 2023',
+        thumbnailUrl: 'https://placehold.co/260x220',
+        desc: 'Enjoy watching Cricket Series between India and Australia',
+        views: '1.1M',
+        publishedOn: '3 days ago',
+        isInWatchlist: true
       },
       {
         id: 7896798,
-        title: "Top 10 Goals of Messi",
-        thumbnailUrl: "https://placehold.co/260x220",
-        desc: "Enjoy watching the 10 best goals of Messi",
-        views: "600K",
-        publishedOn: "2 days ago",
-        isInWatchlist: false,
+        title: 'Top 10 Goals of Messi',
+        thumbnailUrl: 'https://placehold.co/260x220',
+        desc: 'Enjoy watching the 10 best goals of Messi',
+        views: '600K',
+        publishedOn: '2 days ago',
+        isInWatchlist: false
       },
       {
         id: 345678,
-        title: "Top 10 Goals of Ronaldo",
-        thumbnailUrl: "https://placehold.co/260x220",
-        desc: "Enjoy watching the 10 best goals of Ronaldo",
-        views: "800K",
-        publishedOn: "5 days ago",
-        isInWatchlist: false,
-      },
-    ],
+        title: 'Top 10 Goals of Ronaldo',
+        thumbnailUrl: 'https://placehold.co/260x220',
+        desc: 'Enjoy watching the 10 best goals of Ronaldo',
+        views: '800K',
+        publishedOn: '5 days ago',
+        isInWatchlist: false
+      }
+    ]
   };
 
   // event handler method
-  handleManageWatchlist( index ){
+  handleManageWatchlist (index) {
     console.log(this);
     console.log(index);
     // duplicating videos array from state
@@ -44,13 +44,13 @@ class RecommendedVideoList extends Component {
     const duplicateVideos = [...this.state.videos];
     duplicateVideos[index].isInWatchlist =
       !duplicateVideos[index].isInWatchlist;
-   
+
     this.setState({
-      videos: duplicateVideos,
+      videos: duplicateVideos
     });
   }
 
-  render() {
+  render () {
     console.log('Rendering');
     // Conditional Rendering
     if (!Array.isArray(this.state.videos) || this.state.videos?.length === 0) {
@@ -88,7 +88,7 @@ class RecommendedVideoList extends Component {
                   onClick={this.handleManageWatchlist.bind(this, index)}
                 >
                   {/* conditional rendering in JSX */}
-                  {video.isInWatchlist ? "In Watchlist" : "Add to Watchlist"}
+                  {video.isInWatchlist ? 'In Watchlist' : 'Add to Watchlist'}
                 </button>
               </li>
             </ul>

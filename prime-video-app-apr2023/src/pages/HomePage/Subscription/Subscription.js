@@ -1,22 +1,22 @@
-import "./Subscription.css";
+import './Subscription.css';
 
 const Subscription = () => {
   // internal styles
   const subscriptionStyles = {
     renewStyles: {
-      backgroundColor: "yellow",
-      color: "#000",
-      padding: "20px",
-      border: "solid 3px red",
-      borderRadius: "10px",
+      backgroundColor: 'yellow',
+      color: '#000',
+      padding: '20px',
+      border: 'solid 3px red',
+      borderRadius: '10px'
     },
     btnStyles: {
-      backgroundColor: "red",
-      color: "#fff",
-      padding: "10px 20px",
-      border: "solid 3px darkred",
-      borderRadius: "10px",
-    },
+      backgroundColor: 'red',
+      color: '#fff',
+      padding: '10px 20px',
+      border: 'solid 3px darkred',
+      borderRadius: '10px'
+    }
   };
 
   return (
@@ -30,10 +30,10 @@ const Subscription = () => {
       {/* Inline CSS -- NEVER EVER TRY THIS IN LISTS / Loops */}
       <p
         style={{
-          backgroundColor: "red",
-          color: "#fff",
-          padding: "20px",
-          border: "solid 3px #ccc",
+          backgroundColor: 'red',
+          color: '#fff',
+          padding: '20px',
+          border: 'solid 3px #ccc'
         }}
       >
         Your subscription will end in two weeks

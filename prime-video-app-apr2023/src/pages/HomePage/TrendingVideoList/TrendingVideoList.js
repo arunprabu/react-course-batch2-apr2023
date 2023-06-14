@@ -1,12 +1,12 @@
 // Class Component and states demo
-/* skeleton of class comp 
+/* skeleton of class comp
   * must import Component class from react
   * our comp class must inherit React Component class
-  * must have render method 
+  * must have render method
     * must return JSX
 */
 
-import { Component } from "react";
+import { Component } from 'react';
 
 // must inherit React.Component class
 class TrendingVideoList extends Component {
@@ -18,30 +18,30 @@ class TrendingVideoList extends Component {
       {
         id: 1,
         trendingRank: 1,
-        title: "Man Vs Wild",
-        thumbnailUrl: "https://placehold.co/260x220",
-        desc: "A Wild Adventure show in Discovery Channel",
-        views: "700K",
-        publishedOn: "1 week ago",
+        title: 'Man Vs Wild',
+        thumbnailUrl: 'https://placehold.co/260x220',
+        desc: 'A Wild Adventure show in Discovery Channel',
+        views: '700K',
+        publishedOn: '1 week ago'
       },
       {
         id: 2,
         trendingRank: 2,
-        title: "Planet Earth II",
-        thumbnailUrl: "https://placehold.co/260x220",
-        desc: "A show by David Attenborough on BBC Earth Channel",
-        views: "900K",
-        publishedOn: "2 weeks ago",
-      },
+        title: 'Planet Earth II',
+        thumbnailUrl: 'https://placehold.co/260x220',
+        desc: 'A show by David Attenborough on BBC Earth Channel',
+        views: '900K',
+        publishedOn: '2 weeks ago'
+      }
     ],
     videoResolution: '4K'
   };
 
   // event handler method
   handleChangeResolution = () => {
-    console.log(this.state.videoResolution); //4K
+    console.log(this.state.videoResolution); // 4K
     // Do not mutate state directly. Use setState()
-    // this.state.videoResolution = '8K'; 
+    // this.state.videoResolution = '8K';
     // if you update state directly data will only be updated. Not UI.
 
     // render method will be called immediately after setState is called
@@ -51,14 +51,14 @@ class TrendingVideoList extends Component {
   }
 
   // must have render method
-  render() {
-    console.log("Inside Render Method");
+  render () {
+    console.log('Inside Render Method');
     // must return JSX
     return (
       <div className="row">
         <p>
-          Enjoy these shows in {this.state.videoResolution} Resolution{" "}
-          <button className="btn btn-primary btn-sm" 
+          Enjoy these shows in {this.state.videoResolution} Resolution{' '}
+          <button className="btn btn-primary btn-sm"
             onClick={this.handleChangeResolution}>Change Resolution</button>
         </p>
 
@@ -71,7 +71,7 @@ class TrendingVideoList extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">
-                #{this.state.videos[0].trendingRank}{" "}
+                #{this.state.videos[0].trendingRank}{' '}
                 {this.state.videos[0].title}
               </h5>
               <p className="card-text">{this.state.videos[0].desc}</p>
@@ -96,7 +96,7 @@ class TrendingVideoList extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">
-                #{this.state.videos[1].trendingRank}{" "}
+                #{this.state.videos[1].trendingRank}{' '}
                 {this.state.videos[1].title}
               </h5>
               <p className="card-text">{this.state.videos[1].desc}</p>

@@ -1,9 +1,9 @@
-import LatestVideo from "./LatestVideo/LatestVideo";
-import LifeCycleDemo from "./LifeCycleDemo/LifeCycleDemo";
-import MyProfile from "./MyProfile/MyProfile";
-import RecommendedVideoList from "./RecommendedVideoList/RecommendedVideoList";
-import Subscription from "./Subscription/Subscription";
-import TrendingVideoList from "./TrendingVideoList/TrendingVideoList";
+import LatestVideo from './LatestVideo/LatestVideo';
+import LifeCycleDemo from './LifeCycleDemo/LifeCycleDemo';
+import MyProfile from './MyProfile/MyProfile';
+import RecommendedVideoList from './RecommendedVideoList/RecommendedVideoList';
+import Subscription from './Subscription/Subscription';
+import TrendingVideoList from './TrendingVideoList/TrendingVideoList';
 
 const HomePage = () => {
   return (
@@ -43,8 +43,8 @@ const HomePage = () => {
 
       <div className="row mt-5">
         <hr />
-        <h2>Recommended Video List | 
-          States, Events, Lists and Keys, 
+        <h2>Recommended Video List |
+          States, Events, Lists and Keys,
           Conditionals Demo</h2>
         <RecommendedVideoList />
       </div>
@@ -66,7 +66,6 @@ const HomePage = () => {
         <h2>My Profile | Two Way Binding Demo</h2>
         <MyProfile />
       </div>
-
 
     </div>
   );

@@ -1,9 +1,9 @@
 // Functional Component with Arrow Function
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // fn defn
-  // must return jsx
+// must return jsx
 // export
 
 const MenuList = () => {

@@ -270,6 +270,36 @@ Routing
 =========================
 
 
+Types of Languages by Data Typing 
+---
+  1. Strictly-Typed Languages / Strongly-Typed Languages
+      Examples: Java, C# 
+      ----
+        String myName = "Arun"; // valid 
+        myName = "John"; // valid
+        myName = true; // compilation error
+
+  2. Loosely-Typed Languages / Dynamically-Typed Languages
+      Examples: JavaScript, PHP, Python 
+      ----
+        var myName = "Arun"; // valid 
+        myName = 1000; // valid 
+        myName = true; // valid 
+        myName = []; // valid  
+        myName = {}; // valid 
+        myName = undefined; // valid 
+        myName = null; // valid 
+
+======
+Static Type Checking in ReactJS 
+--------
+  1. TypeScript 
+  2. FlowJS 
+  3. PropTypes 
+      npm i prop-types 
+
+
+
 Concepts
 ---
   data binding [DONE]
@@ -293,11 +323,14 @@ Concepts
     Fragments [DONE]
     StrictMode [DONE]
     Error Boundary [DONE]
-    HOC 
+    HOC [DONE]
     Todos 
 
-    Debugging 
+    Static Type Checking [DONE]
+    Typechecking With PropTypes [DONE]
     Linting Setup 
+    Debugging 
+    
 
   Hooks [12 hours]
   

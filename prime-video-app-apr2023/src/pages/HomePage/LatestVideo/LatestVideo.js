@@ -1,5 +1,7 @@
 // rafce
-const LatestVideo = (props) => { 
+import PropTypes from 'prop-types';
+
+const LatestVideo = (props) => {
   /* receiving the data from parent comp in props
     props are objects
     props are read-only
@@ -24,6 +26,14 @@ const LatestVideo = (props) => {
       </ul>
     </div>
   );
+};
+
+LatestVideo.propTypes = {
+  title: PropTypes.string,
+  thumbnailUrl: PropTypes.string,
+  views: PropTypes.string,
+  publishedDate: PropTypes.string,
+  children: PropTypes.string
 };
 
 export default LatestVideo;

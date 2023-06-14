@@ -1,14 +1,14 @@
 // App comp can have JS, JSX and CSS (optional)
 // ideal place for your layout
-/* 
+/*
   imports (optional)
   comp defintion
-  export 
+  export
 */
 
-// imports 
+// imports
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './pages/HomePage/HomePage';
@@ -18,7 +18,7 @@ import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 import HocDemoPage from './pages/HocDemoPage/HocDemoPage';
 
 // Comp definition
-function App() {
+function App () {
   // must return JSX
   return (
     <ErrorBoundary>

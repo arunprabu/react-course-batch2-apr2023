@@ -1,5 +1,5 @@
 // node_modules imports
-import React from 'react';  // core react library
+import React from 'react'; // core react library
 import ReactDOM from 'react-dom/client'; // React package for working with the DOM.
 
 // custom imports
@@ -11,7 +11,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <App />
+  <App />
   // </React.StrictMode>
 );
 

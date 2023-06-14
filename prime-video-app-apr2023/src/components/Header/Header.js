@@ -6,7 +6,7 @@
 
 import MenuList from '../MenuList/MenuList';
 
-function Header() {
+function Header () {
   // must return JSX
   return (
     <header>
