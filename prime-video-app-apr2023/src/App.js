@@ -16,6 +16,7 @@ import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 import HocDemoPage from './pages/HocDemoPage/HocDemoPage';
+import HooksDemoPage from './pages/HooksDemoPage/HooksDemoPage';
 
 // Comp definition
 function App () {
@@ -34,6 +35,7 @@ function App () {
                 <Route path="hoc-demo" element={<HocDemoPage />} />
                 <Route path="/about-us" element={<AboutUsPage />} />
                 <Route path="/contact-us" element={<ContactUsPage />} />
+                <Route path="/hooks-demo" element={<HooksDemoPage />} />
               </Routes>
             </ErrorBoundary>
           </main>

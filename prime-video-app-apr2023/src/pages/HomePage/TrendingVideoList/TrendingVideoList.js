@@ -58,8 +58,12 @@ class TrendingVideoList extends Component {
       <div className="row">
         <p>
           Enjoy these shows in {this.state.videoResolution} Resolution{' '}
-          <button className="btn btn-primary btn-sm"
-            onClick={this.handleChangeResolution}>Change Resolution</button>
+          <button
+            className="btn btn-primary btn-sm"
+            onClick={this.handleChangeResolution}
+          >
+            Change Resolution
+          </button>
         </p>
 
         <div className="col-md-3">
@@ -111,6 +115,7 @@ class TrendingVideoList extends Component {
             </ul>
           </div>
         </div>
+
       </div>
     );
   }

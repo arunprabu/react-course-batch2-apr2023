@@ -110,6 +110,7 @@ Naming Conventions & Casing
         examples 
         -----
           var myCar = 'BMW';
+          var isLoggedIn = true;
 
           function getCarInfo() {
             //....
@@ -338,6 +339,21 @@ How to Setup ESLint and also prettier?
 
 
 ----
+Hooks 
+---
+  React before 2019 (before v 16.8)
+    * fn comp did not have state
+    * fn comp did not have life cycle hooks
+    * Any to Any comp commn was not possible 
+
+  React after 2019 (from react v16.8)
+    * fn comp can have state
+    * fn comp can have life cycle hooks kind of alternatives
+    * Any to Any comp commn has become possible 
+
+
+
+
 
 
 Concepts
@@ -369,7 +385,7 @@ Concepts
     Static Type Checking [DONE]
     Typechecking With PropTypes [DONE]
     Linting Setup [DONE]
-    Debugging 
+    Debugging [DONE]
 
   Hooks [12 hours]
   

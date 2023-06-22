@@ -1,6 +1,6 @@
 // Functional Component with Arrow Function
 
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // fn defn
 // must return jsx
@@ -10,24 +10,29 @@ const MenuList = () => {
   return (
     <ul className="navbar-nav me-auto mb-2 mb-md-0">
       <li className="nav-item">
-        <Link className="nav-link active" aria-current="page" to="/">
+        <NavLink className="nav-link" aria-current="page" to="/">
           Home
-        </Link>
+        </NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/hoc-demo">
+        <NavLink className="nav-link" to="/hoc-demo">
           Hoc Demo
-        </Link>
+        </NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/about-us">
+        <NavLink className="nav-link" to="/about-us">
           About Us
-        </Link>
+        </NavLink>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/contact-us">
+        <NavLink className="nav-link" to="/contact-us">
           Contact Us
-        </Link>
+        </NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/hooks-demo">
+          Hooks Demo
+        </NavLink>
       </li>
     </ul>
   );

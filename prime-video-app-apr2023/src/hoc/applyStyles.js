@@ -2,7 +2,7 @@
 // that takes in a Component as input and returns a new Component as output
 
 const applyStyles = (OriginalComponent) => { // receiving the original comp
-  console.log(OriginalComponent);
+  // console.log(OriginalComponent);
 
   // creating a new fn comp
   const NewComponent = (props) => {
