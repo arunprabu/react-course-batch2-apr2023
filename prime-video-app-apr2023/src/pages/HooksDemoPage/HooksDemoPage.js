@@ -1,6 +1,8 @@
 import React from 'react'
 import MyAccount from './MyAccount/MyAccount';
 import Blog from './Blog/Blog';
+import TodosVariant1 from './TodosVariant1/TodosVariant1';
+import TodosVariant2 from './TodosVariant2/TodosVariant2';
 
 const HooksDemoPage = () => {
   return (
@@ -14,6 +16,8 @@ const HooksDemoPage = () => {
       <Blog />
 
       <h2>useRef & useReducer hook Demo</h2>
+      <TodosVariant1 />
+      <TodosVariant2 />
 
       <h2>useId hook Demo</h2>
 
