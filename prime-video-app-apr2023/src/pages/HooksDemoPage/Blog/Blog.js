@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
 const Blog = () => {
-  console.log('1. Program Started');
+  // console.log('1. Program Started');
   const [topicName, setTopicName] = useState('React Hooks!');
   const [publishedDate, setPublishedDate] = useState(new Date());
 
   // in useEffect hook, first param: effect callback; second param: dependency list
   useEffect(() => {
     // runs after initial rendering
-    console.log('3. Inside useEffect Callback');
+    // console.log('3. Inside useEffect Callback');
     // this is alternative to life cycle hook -- componentDidMount and componentDidUpdate
     // ideal place for you to send REST API Calls
     // you can update the state from here
@@ -21,7 +21,7 @@ const Blog = () => {
     setTopicName('Demo of useEffect Hook and useState Hook');
   };
 
-  console.log('2. Program Ended');
+  // console.log('2. Program Ended');
   return (
     <>
       <h3>Blog</h3>
