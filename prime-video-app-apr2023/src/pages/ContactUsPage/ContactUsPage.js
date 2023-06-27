@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { PageContext } from '../../contexts/PageContext';
 
 const ContactUsPage = () => {
-  // Step 3 of React Context API: LEt's receive the data suplied thru PageContext
+  // Step 3 of React Context API: Let's receive the data suplied thru PageContext
   const userStatus = useContext(PageContext);
   console.log(userStatus);
 
