@@ -353,6 +353,21 @@ Hooks
 
 
 
+---
+useContext() Hook
+Let's us share data across components 
+
+Step 1: create context with any data or even null inside 
+Refer: PageContext.js 
+
+Step 2: Provide the data to the list of components you want to share 
+Check App.js 
+
+Step 3: Using <PageContext.Provider> to share the data across the few components 
+
+Step 4: Consume it in both Home.js and ContactUs.js 
+  ----
+
 
 
 
@@ -388,6 +403,12 @@ Concepts
     Debugging [DONE]
 
   Hooks [12 hours]
+    useState [DONE]
+    useEffect [DONE]
+    useRef [DONE]
+    useReducer [DONE]
+    useId [DONE]
+    useContext 
   
   AJAX calls using fetch, axios [1 hour]
   Unit Testing [20-24 hours]

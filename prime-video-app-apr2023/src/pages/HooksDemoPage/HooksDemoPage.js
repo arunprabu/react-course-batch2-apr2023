@@ -3,6 +3,7 @@ import MyAccount from './MyAccount/MyAccount';
 import Blog from './Blog/Blog';
 import TodosVariant1 from './TodosVariant1/TodosVariant1';
 import TodosVariant2 from './TodosVariant2/TodosVariant2';
+import PaymentForm from './PaymentForm/PaymentForm';
 
 const HooksDemoPage = () => {
   return (
@@ -20,6 +21,7 @@ const HooksDemoPage = () => {
       <TodosVariant2 />
 
       <h2>useId hook Demo</h2>
+      <PaymentForm />
 
       <h2>useContext Demo - will explain in another comp</h2>
     </div>

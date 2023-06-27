@@ -17,9 +17,16 @@ import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 import HocDemoPage from './pages/HocDemoPage/HocDemoPage';
 import HooksDemoPage from './pages/HooksDemoPage/HooksDemoPage';
+import { PageContext } from './contexts/PageContext';
 
 // Comp definition
 function App () {
+  // want to pass the following data via the context created
+  const userStatus = {
+    isLoggedIn: true,
+    lastLogin: new Date()
+  }
+
   // must return JSX
   return (
     <ErrorBoundary>
@@ -29,14 +36,17 @@ function App () {
 
           <main className="container mt-5 pt-3">
             <ErrorBoundary>
-              {/* Let's config the routing here */}
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="hoc-demo" element={<HocDemoPage />} />
-                <Route path="/about-us" element={<AboutUsPage />} />
-                <Route path="/contact-us" element={<ContactUsPage />} />
-                <Route path="/hooks-demo" element={<HooksDemoPage />} />
-              </Routes>
+              {/* Step 2 of Context API: providing data thru the created context */}
+              <PageContext.Provider value={userStatus}>
+                {/* Let's config the routing here */}
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="hoc-demo" element={<HocDemoPage />} />
+                  <Route path="/about-us" element={<AboutUsPage />} />
+                  <Route path="/contact-us" element={<ContactUsPage />} />
+                  <Route path="/hooks-demo" element={<HooksDemoPage />} />
+                </Routes>
+              </PageContext.Provider>
             </ErrorBoundary>
           </main>
 
