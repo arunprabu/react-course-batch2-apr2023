@@ -8,6 +8,7 @@
 
 // imports
 import './App.css';
+import { useReducer } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -18,6 +19,9 @@ import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
 import HocDemoPage from './pages/HocDemoPage/HocDemoPage';
 import HooksDemoPage from './pages/HooksDemoPage/HooksDemoPage';
 import { PageContext } from './contexts/PageContext';
+import ShopPage from './pages/ShopPage/ShopPage';
+import { CartContext } from './contexts/CartContext';
+import cartReducer from './reducers/cartReducer';
 
 // Comp definition
 function App () {
@@ -27,32 +31,42 @@ function App () {
     lastLogin: new Date()
   }
 
+  const [cartState, cartDispatch] = useReducer(cartReducer);
+
+  const cart = {
+    cartState, // needed for Header comp
+    cartDispatch // needed for ShopPage comp
+  }
+
   // must return JSX
   return (
     <ErrorBoundary>
-      <BrowserRouter>
-        <div>
-          <Header></Header>
+      <CartContext.Provider value={cart}>
+        <BrowserRouter>
+          <div>
+            <Header></Header>
 
-          <main className="container mt-5 pt-3">
-            <ErrorBoundary>
-              {/* Step 2 of Context API: providing data thru the created context */}
-              <PageContext.Provider value={userStatus}>
-                {/* Let's config the routing here */}
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="hoc-demo" element={<HocDemoPage />} />
-                  <Route path="/about-us" element={<AboutUsPage />} />
-                  <Route path="/contact-us" element={<ContactUsPage />} />
-                  <Route path="/hooks-demo" element={<HooksDemoPage />} />
-                </Routes>
-              </PageContext.Provider>
-            </ErrorBoundary>
-          </main>
+            <main className="container mt-5 pt-3">
+              <ErrorBoundary>
+                {/* Step 2 of Context API: providing data thru the created context */}
+                <PageContext.Provider value={userStatus}>
+                  {/* Let's config the routing here */}
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="hoc-demo" element={<HocDemoPage />} />
+                    <Route path="/about-us" element={<AboutUsPage />} />
+                    <Route path="/contact-us" element={<ContactUsPage />} />
+                    <Route path="/hooks-demo" element={<HooksDemoPage />} />
+                    <Route path="/shop" element={<ShopPage />} />
+                  </Routes>
+                </PageContext.Provider>
+              </ErrorBoundary>
+            </main>
 
-          <Footer />
-        </div>
-      </BrowserRouter>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </CartContext.Provider>
     </ErrorBoundary>
   );
 }

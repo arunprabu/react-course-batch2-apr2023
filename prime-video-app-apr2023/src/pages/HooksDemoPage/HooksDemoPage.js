@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import MyAccount from './MyAccount/MyAccount';
 import Blog from './Blog/Blog';
 import TodosVariant1 from './TodosVariant1/TodosVariant1';
 import TodosVariant2 from './TodosVariant2/TodosVariant2';
 import PaymentForm from './PaymentForm/PaymentForm';
+import { PageContext } from '../../contexts/PageContext';
 
 const HooksDemoPage = () => {
+  const userStatus = useContext(PageContext);
+
   return (
     <div>
       <h1>Hooks Demo</h1>
@@ -23,7 +26,10 @@ const HooksDemoPage = () => {
       <h2>useId hook Demo</h2>
       <PaymentForm />
 
-      <h2>useContext Demo - will explain in another comp</h2>
+      <hr/>
+      <h2>useContext Demo</h2>
+      <p>Last Login: {userStatus.lastLogin.toString()}</p>
+
     </div>
   );
 }
