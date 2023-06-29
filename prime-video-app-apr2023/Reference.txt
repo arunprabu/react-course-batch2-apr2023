@@ -386,9 +386,6 @@ Concepts
   Routing[DONE]
   LifeCycle Hooks [DONE]
   Two Way Binding [DONE]
-
-  [PENDING]
-  forms [1 hour]
   
   Adv react concepts [4-5 hours]
     Fragments [DONE]
@@ -408,9 +405,22 @@ Concepts
     useRef [DONE]
     useReducer [DONE]
     useId [DONE]
-    useContext 
+    useContext [DONE]
+    Custom Hook 
   
-  AJAX calls using fetch, axios [1 hour]
+  AJAX calls using axios [DONE]
+  forms in React 
+
+
+React does't have tools for 
+----
+  1. Routing (so, use react-router-dom)
+  2. Static Type Checking (so, use prop-types or Typescript)
+  3. Client tool REST API Calls (so, use axios or fetch)
+  4. Forms and Validations (so, use react-hook-form [RECOMMENDED] or formik )
+-----
+
+
   Unit Testing [20-24 hours]
   Build and Deployement [~5 hour]
     Code-Splitting

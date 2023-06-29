@@ -34,7 +34,11 @@ function Header () {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <MenuList />
             <button type="button" className="btn btn-danger">
-              Cart ({cart.cartState?.length})
+              Cart (
+              {cart.cartState?.length === undefined
+                ? '0'
+                : cart.cartState?.length}
+              )
             </button>
           </div>
         </div>

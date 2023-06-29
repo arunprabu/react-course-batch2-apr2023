@@ -22,6 +22,7 @@ import { PageContext } from './contexts/PageContext';
 import ShopPage from './pages/ShopPage/ShopPage';
 import { CartContext } from './contexts/CartContext';
 import cartReducer from './reducers/cartReducer';
+import GalleryPage from './pages/GalleryPage/GalleryPage';
 
 // Comp definition
 function App () {
@@ -58,6 +59,7 @@ function App () {
                     <Route path="/contact-us" element={<ContactUsPage />} />
                     <Route path="/hooks-demo" element={<HooksDemoPage />} />
                     <Route path="/shop" element={<ShopPage />} />
+                    <Route path="/gallery" element={<GalleryPage />} />
                   </Routes>
                 </PageContext.Provider>
               </ErrorBoundary>

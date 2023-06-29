@@ -39,6 +39,11 @@ const MenuList = () => {
           Shop
         </NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/gallery">
+          Gallery
+        </NavLink>
+      </li>
     </ul>
   );
 }
