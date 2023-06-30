@@ -406,10 +406,12 @@ Concepts
     useReducer [DONE]
     useId [DONE]
     useContext [DONE]
-    Custom Hook 
+    Custom Hook [PENDING]
   
   AJAX calls using axios [DONE]
   forms in React 
+
+  Nested Routing / Child Routing 
 
 
 React does't have tools for 
@@ -420,17 +422,149 @@ React does't have tools for
   4. Forms and Validations (so, use react-hook-form [RECOMMENDED] or formik )
 -----
 
-
-  Unit Testing [20-24 hours]
+  Unit Testing [16-20 hours]
   Build and Deployement [~5 hour]
     Code-Splitting
     Lazy Loading 
+    performance tuning tips
   and many more...
 
   Redux 
 
 
+
+Project: Calc 
+---
+  Analysis 
+    Design 
+      Development 
+        Testing 
+          Deployment 
+            Maintanance 
+
+
+Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (QA Passed) => Deployment 
+
+Development
+-----
+  Sources: FRD, HLD, LLD, Designs, Style guide 
+  -------
+
+  Prepare Test Cases: 
+  ----  
+    1. add should take numbers as inputs 
+    2. add should return only number as output 
+    3. if wrong inputs entered add button should be disabled 
+    4. add button should have + icon
+
+  feature: add 
+  -------
+    function add(a, b) {
+      if(typeof a === number && typeof b === number) {
+        return a + b;
+      }
+    }
+    add(10, 20);  // 30
+
+  Setup Tools to test our app. 
+
+
 ----
+
+Modern Sofware Dev Approaches 
+----
+  1. Test-Driven Development (TDD) -- TO LEARN 
+      * Write NEW CODE only if automated test fails 
+
+      Dev Writes Test cases => (FAILURE) => Dev Writes Functionality => (SUCCESS) => [CODE COMPLETE]
+    
+      Test Pattern: AAA (Arrange, Act, Assert)
+      Tools: JEST JS 
+
+  2. Behaviour-Driven Development (BDD)
+      * an agile s/w methodology 
+      * app is documented, designed around the behavior the end user wants to experience when 
+        interacting with the app. 
+
+      Dev writes Test Cases around the behavior of the app => (FAILURE) => Dev Writes Functionality => (SUCCESS) => [CODE COMPLETE]
+
+      Test Pattern: Given/When/Then 
+      Tools: Jasmine JS 
+
+Automated Testing 
+-----
+  Levels 
+  ---
+    0. Static Type Checking [DONE]
+        Tools: TypeScrip or Flow JS or Prop-Types 
+
+    1. Unit Testing - TO LEARN 
+        * Testing tiny, independent unit of our code
+        * Testing the component in isolation (Without connecting to the REST API)
+        * Bug Reduction Density: 40-80% 
+
+        Tools: 
+        ----
+          JEST JS (Unit Testing Framework + Test Runner)
+          React Testing Library - RTL (DOM Querying Utility)
+
+    2. Integration Testing 
+        * Testing components by integrating them together
+        * Testing the component with REST API Calls
+
+        Tools: 
+        ----
+          JEST JS (Unit Testing Framework + Test Runner)
+          React Testing Library - RTL (DOM Querying Utility)
+
+    3. End to End (E2E) Testing 
+        * Testing the whole app as one entity.
+        * Will be done by QA team members. 
+
+        Tools: 
+        ----
+          * Selenium 
+          * CypressJS 
+          * Protractor 
+          * Playwright 
+
+
+=====
+
+
+To Learn 
+---
+  1. How to write test cases?
+  2. Where to write test cases? 
+  3. How to test the app by tools? 
+
+Unit Testing Topics 
+==================
+  0. File walkthru 
+  1. Testing JSX Elements 
+      * getByText 
+      * getByTestId 
+      * ..
+  2. Testing Props 
+  3. Testing inline CSS 
+  4. Testing External CSS (CSS class) 
+  5. Testing Events & States 
+  6. Testing Events with Buttons 
+  7. Snapshot Testing 
+  8. Testing Forms 
+      Ref: ContactUsPage.js and ContactUsPage.test.js 
+      Validate the form 
+
+  9. Testing REST API Calls 
+      * with mocks 
+        1. using fetch 
+        2. using axios [TODO]
+      * with spies 
+      * negative test 
+  10. Testing Routing [TODO]
+  11. Setup and Tear Down 
+  12. Code Coverage 
+
 
 
 

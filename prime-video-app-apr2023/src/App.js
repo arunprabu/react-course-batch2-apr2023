@@ -9,20 +9,14 @@
 // imports
 import './App.css';
 import { useReducer } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import HomePage from './pages/HomePage/HomePage';
-import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
-import ContactUsPage from './pages/ContactUsPage/ContactUsPage';
 import ErrorBoundary from './containers/ErrorBoundary/ErrorBoundary';
-import HocDemoPage from './pages/HocDemoPage/HocDemoPage';
-import HooksDemoPage from './pages/HooksDemoPage/HooksDemoPage';
 import { PageContext } from './contexts/PageContext';
-import ShopPage from './pages/ShopPage/ShopPage';
 import { CartContext } from './contexts/CartContext';
 import cartReducer from './reducers/cartReducer';
-import GalleryPage from './pages/GalleryPage/GalleryPage';
+import AppRoutes from './routes/AppRoutes/AppRoutes';
 
 // Comp definition
 function App () {
@@ -48,19 +42,11 @@ function App () {
             <Header></Header>
 
             <main className="container mt-5 pt-3">
+              <p>Success</p>
               <ErrorBoundary>
                 {/* Step 2 of Context API: providing data thru the created context */}
                 <PageContext.Provider value={userStatus}>
-                  {/* Let's config the routing here */}
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="hoc-demo" element={<HocDemoPage />} />
-                    <Route path="/about-us" element={<AboutUsPage />} />
-                    <Route path="/contact-us" element={<ContactUsPage />} />
-                    <Route path="/hooks-demo" element={<HooksDemoPage />} />
-                    <Route path="/shop" element={<ShopPage />} />
-                    <Route path="/gallery" element={<GalleryPage />} />
-                  </Routes>
+                  <AppRoutes />
                 </PageContext.Provider>
               </ErrorBoundary>
             </main>
