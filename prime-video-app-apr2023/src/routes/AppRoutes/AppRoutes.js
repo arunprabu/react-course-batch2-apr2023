@@ -8,18 +8,20 @@ import HocDemoPage from '../../pages/HocDemoPage/HocDemoPage';
 import HooksDemoPage from '../../pages/HooksDemoPage/HooksDemoPage';
 import ShopPage from '../../pages/ShopPage/ShopPage';
 import GalleryPage from '../../pages/GalleryPage/GalleryPage';
+import UnitTestingDemo from '../../pages/UnitTestingDemo/UnitTestingDemo';
 
 const AppRoutes = () => {
   return (
     // Let's config the routing here
     <Routes>
-      <Route path="/" element={<HomePage/>} />
+      <Route path="/" element={<HomePage />} />
       <Route path="hoc-demo" element={<HocDemoPage />} />
       <Route path="/about-us" element={<AboutUsPage />} />
       <Route path="/contact-us" element={<ContactUsPage />} />
       <Route path="/hooks-demo" element={<HooksDemoPage />} />
       <Route path="/shop" element={<ShopPage />} />
       <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/unit-testing-demo" element={<UnitTestingDemo />} />
     </Routes>
   );
 }

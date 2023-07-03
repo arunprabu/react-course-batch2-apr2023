@@ -442,14 +442,12 @@ Project: Calc
           Deployment 
             Maintanance 
 
-
 Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (bugs) => Dev => QA => (QA Passed) => Deployment 
 
 Development
 -----
   Sources: FRD, HLD, LLD, Designs, Style guide 
   -------
-
   Prepare Test Cases: 
   ----  
     1. add should take numbers as inputs 
@@ -540,9 +538,9 @@ To Learn
 
 Unit Testing Topics 
 ==================
-  0. File walkthru 
+  0. File walkthru [DONE]
   1. Testing JSX Elements 
-      * getByText 
+      * getByText [DONE]
       * getByTestId 
       * ..
   2. Testing Props 

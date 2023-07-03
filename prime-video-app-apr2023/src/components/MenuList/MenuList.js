@@ -44,6 +44,11 @@ const MenuList = () => {
           Gallery
         </NavLink>
       </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/unit-testing-demo">
+          Unit Testing Demo
+        </NavLink>
+      </li>
     </ul>
   );
 }

@@ -42,7 +42,6 @@ function App () {
             <Header></Header>
 
             <main className="container mt-5 pt-3">
-              <p>Success</p>
               <ErrorBoundary>
                 {/* Step 2 of Context API: providing data thru the created context */}
                 <PageContext.Provider value={userStatus}>
