@@ -54,7 +54,7 @@ describe('CompanyInfo', () => {
     expect(countryInput).toBeTruthy();
   });
 
-  // Testing states and events
+  // Testing states and events -- must in all places in capstone project
   it('displays countryName USA by default and updates JSX onChange of country input', () => {
     render(<CompanyInfo />);
     // finding input element
