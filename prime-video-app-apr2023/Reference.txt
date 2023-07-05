@@ -423,9 +423,10 @@ React does't have tools for
 -----
 
   Unit Testing [16-20 hours]
+  custom hooks
   Build and Deployement [~5 hour]
     Code-Splitting
-    Lazy Loading 
+    Lazy Loading and Suspense
     performance tuning tips
   and many more...
 
@@ -477,7 +478,7 @@ Modern Sofware Dev Approaches
       Dev Writes Test cases => (FAILURE) => Dev Writes Functionality => (SUCCESS) => [CODE COMPLETE]
     
       Test Pattern: AAA (Arrange, Act, Assert)
-      Tools: JEST JS 
+      Tools: JEST JS
 
   2. Behaviour-Driven Development (BDD)
       * an agile s/w methodology 
@@ -541,11 +542,11 @@ Unit Testing Topics
   0. File walkthru [DONE]
   1. Testing JSX Elements 
       * getByText [DONE]
-      * getByTestId 
+      * getByTestId [DONE]
       * ..
-  2. Testing Props 
-  3. Testing inline CSS 
-  4. Testing External CSS (CSS class) 
+  2. Testing Props [DONE]
+  3. Testing inline CSS [DONE]
+  4. Testing External CSS (CSS class) [TODO]
   5. Testing Events & States 
   6. Testing Events with Buttons 
   7. Snapshot Testing 
@@ -562,6 +563,8 @@ Unit Testing Topics
   10. Testing Routing [TODO]
   11. Setup and Tear Down 
   12. Code Coverage 
+  
+  Explain custom hooks
 
 
 

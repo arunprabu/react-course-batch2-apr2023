@@ -41,5 +41,5 @@ it('has proper App Component', () => {
 /*
   * test, it, expect are from JEST
   * render, screen are from RTL.
-  * toBeTruthy, toBeInTheDocument are from jest-dom
+  * toBeTruthy, toBeInTheDocument are matchers from jest-dom
 */
