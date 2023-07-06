@@ -7,7 +7,7 @@ const CompanyInfo = ({ foundedYear }) => {
   const handleCountryNameChange = (event) => {
     console.log(event.target.value);
     setCountryName(event.target.value);
-  }
+  };
 
   return (
     <div>
@@ -32,10 +32,21 @@ const CompanyInfo = ({ foundedYear }) => {
         value={countryName}
         onChange={handleCountryNameChange}
       />
-      <p data-testid="visitWebsite">Please visit Cognizant {countryName} website</p>
+      <p data-testid="visitWebsite">
+        Please visit Cognizant {countryName} website
+      </p>
+
+      <input
+        type="email"
+        placeholder="Enter E-Mail"
+        className="form-control"
+        style={{ width: '300px' }}
+      />
+      <button type="button" className='btn btn-primary'>Subscribe(d) to Careers Newsletter</button>
+      <p>We will send Career Newsletter E-Mails to a@b.com</p>
     </div>
   );
-}
+};
 CompanyInfo.propTypes = {
   foundedYear: PropTypes.string
 };

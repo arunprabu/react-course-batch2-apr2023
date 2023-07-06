@@ -2,6 +2,7 @@
 
 // Arrange
 import { fireEvent, render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import CompanyInfo from './CompanyInfo';
 
 // TEST SUITE = group of related tests
@@ -78,5 +79,17 @@ describe('CompanyInfo', () => {
     expect(screen.getByTestId('visitWebsite')).toHaveTextContent(
       'Please visit Cognizant South Korea website'
     );
+  });
+
+  // TODO: Testing states and events -- with a button
+
+  // Snapshot Testing
+  it('has right snapshot with all requirements completed', () => {
+    // To take snapshot we need react-test-renderer  // npm i react-test-renderer -D
+    // Taking snapshot and converting it into JSON
+    // [RECOMMENDED]: Take snapshot with all possible props as well as props children
+    const snapshopInJson = renderer.create(<CompanyInfo foundedYear="2000" />).toJSON();
+    // let's assert with toMatchSnapshot()
+    expect(snapshopInJson).toMatchSnapshot();
   });
 });

@@ -543,12 +543,13 @@ Unit Testing Topics
   1. Testing JSX Elements 
       * getByText [DONE]
       * getByTestId [DONE]
-      * ..
+      * getByPlaceholderText [DONE]
+      * ... 
   2. Testing Props [DONE]
   3. Testing inline CSS [DONE]
   4. Testing External CSS (CSS class) [TODO]
-  5. Testing Events & States 
-  6. Testing Events with Buttons 
+  5. Testing Events & States [DONE]
+  6. Testing Events with Buttons [TODO / WILL EXPLAIN]
   7. Snapshot Testing 
   8. Testing Forms 
       Ref: ContactUsPage.js and ContactUsPage.test.js 
