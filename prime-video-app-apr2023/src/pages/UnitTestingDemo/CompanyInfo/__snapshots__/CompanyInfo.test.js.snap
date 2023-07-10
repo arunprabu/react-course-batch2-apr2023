@@ -33,7 +33,7 @@ exports[`CompanyInfo has right snapshot with all requirements completed 1`] = `
   >
     Please visit Cognizant 
     USA
-     website
+     website!
   </p>
   <input
     className="form-control"
@@ -52,7 +52,7 @@ exports[`CompanyInfo has right snapshot with all requirements completed 1`] = `
     Subscribe(d) to Careers Newsletter
   </button>
   <p>
-    We will send Career Newsletter E-Mails to a@b.com
+    We will send Careers Newsletter E-Mails to a@b.com
   </p>
 </div>
 `;

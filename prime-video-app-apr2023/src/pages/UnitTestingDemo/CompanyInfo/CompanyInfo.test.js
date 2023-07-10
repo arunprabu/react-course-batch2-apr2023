@@ -83,7 +83,7 @@ describe('CompanyInfo', () => {
 
   // TODO: Testing states and events -- with a button
 
-  // Snapshot Testing
+  // Snapshot Testing - must in at least one place in capstone project
   it('has right snapshot with all requirements completed', () => {
     // To take snapshot we need react-test-renderer  // npm i react-test-renderer -D
     // Taking snapshot and converting it into JSON

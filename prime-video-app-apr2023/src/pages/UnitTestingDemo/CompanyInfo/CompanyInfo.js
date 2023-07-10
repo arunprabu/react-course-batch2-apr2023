@@ -5,7 +5,6 @@ const CompanyInfo = ({ foundedYear }) => {
   const [countryName, setCountryName] = useState('USA');
 
   const handleCountryNameChange = (event) => {
-    console.log(event.target.value);
     setCountryName(event.target.value);
   };
 
@@ -33,7 +32,7 @@ const CompanyInfo = ({ foundedYear }) => {
         onChange={handleCountryNameChange}
       />
       <p data-testid="visitWebsite">
-        Please visit Cognizant {countryName} website
+        Please visit Cognizant {countryName} website!
       </p>
 
       <input
@@ -42,8 +41,10 @@ const CompanyInfo = ({ foundedYear }) => {
         className="form-control"
         style={{ width: '300px' }}
       />
-      <button type="button" className='btn btn-primary'>Subscribe(d) to Careers Newsletter</button>
-      <p>We will send Career Newsletter E-Mails to a@b.com</p>
+      <button type="button" className="btn btn-primary">
+        Subscribe(d) to Careers Newsletter
+      </button>
+      <p>We will send Careers Newsletter E-Mails to a@b.com</p>
     </div>
   );
 };
