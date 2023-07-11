@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { PageContext } from '../../contexts/PageContext';
+import axios from 'axios';
 
 const ContactUsPage = () => {
   // Step 3 of React Context API: Let's receive the data suplied thru PageContext
@@ -7,23 +8,67 @@ const ContactUsPage = () => {
   console.log(userStatus);
 
   const [formState, setFormState] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    query: '',
+    isSubmitting: false,
     isSaved: false,
     isError: false
   });
+  // console.log(formState);
 
   const handleSubmit = (event) => {
-    console.log('Submitted');
     event.preventDefault();
+    console.log(formState);
+    setFormState({
+      ...formState,
+      isSubmitting: true,
+      isSaved: false,
+      isError: false
+    });
+
+    // Submit the form data to the REST API
+    // What's the REST API URL? https://jsonplaceholder.typicode.com/users
+    // What's the HTTP Method? POST
+    // What's the REST API Client? axios
+    // What's the form data? formState
+    axios
+      .post('https://jsonplaceholder.typicode.com/users', formState)
+      .then((res) => {
+        console.log(res);
+        if (res && res.data) {
+          setFormState({
+            ...formState,
+            isSubmitting: false,
+            isSaved: true,
+            isError: false
+          });
+        }
+      })
+      .catch((err) => {
+        // NEVER FORGET TO CATCH ERROR
+        console.log(err);
+        setFormState({
+          ...formState,
+          isSubmitting: false,
+          isSaved: false,
+          isError: true
+        });
+      })
+      .finally(() => {
+        console.log('It is over!');
+      });
   };
 
   const handleChange = (event) => {
     console.log(event.target.value);
     console.log(event.target.name);
     setFormState({
-      // computed object
+      ...formState,
       [event.target.name]: event.target.value
     });
-  }
+  };
 
   return (
     <div>
@@ -45,9 +90,9 @@ const ContactUsPage = () => {
               type="text"
               className="form-control"
               id="exampleInputName"
+              name="fullName"
               value={formState.fullName}
               onChange={handleChange}
-              name="fullName"
             />
           </div>
           <div className="mb-3">
@@ -58,8 +103,9 @@ const ContactUsPage = () => {
               type="email"
               className="form-control"
               id="exampleInputEmail1"
-              value={formState.email}
               name="email"
+              value={formState.email}
+              onChange={handleChange}
             />
           </div>
           <div className="mb-3">
@@ -70,8 +116,9 @@ const ContactUsPage = () => {
               type="text"
               className="form-control"
               id="exampleInputPhone"
-              value={formState.phone}
               name="phone"
+              value={formState.phone}
+              onChange={handleChange}
             />
           </div>
           <div className="mb-3">
@@ -81,13 +128,23 @@ const ContactUsPage = () => {
             <textarea
               className="form-control"
               id="exampleInputQuery"
-              value={formState.query}
               name="query"
+              value={formState.query}
+              onChange={handleChange}
             />
           </div>
           <button type="submit" className="btn btn-primary">
-            Submit
+            {formState.isSubmitting ? 'Submitting... Please wait...' : 'Submit'}
           </button>
+          {formState.isSaved && (
+            <div className="alert alert-success">Saved Successfully!</div>
+          )}
+
+          {formState.isError && (
+            <div className="alert alert-danger">
+              Sorry! Some Error Occurred! Try again later!
+            </div>
+          )}
         </form>
       </div>
     </div>
