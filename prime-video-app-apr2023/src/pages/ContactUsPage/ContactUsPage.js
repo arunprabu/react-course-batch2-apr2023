@@ -75,9 +75,9 @@ const ContactUsPage = () => {
       <h2>Contact Us</h2>
       <p>
         Logged In Status:{' '}
-        {userStatus.isLoggedIn ? 'Logged In' : 'Not Logged In'}
+        {userStatus?.isLoggedIn ? 'Logged In' : 'Not Logged In'}
       </p>
-      <p>Last Login: {userStatus.lastLogin.toString()}</p>
+      <p>Last Login: {userStatus?.lastLogin.toString()}</p>
 
       <div className="col-md-6">
         <h3>Controlled Components Demo in form input</h3>
@@ -97,7 +97,7 @@ const ContactUsPage = () => {
           </div>
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
-              Email address
+              Email Address
             </label>
             <input
               type="email"
@@ -113,7 +113,7 @@ const ContactUsPage = () => {
               Phone
             </label>
             <input
-              type="text"
+              type="tel"
               className="form-control"
               id="exampleInputPhone"
               name="phone"
