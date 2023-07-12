@@ -424,7 +424,7 @@ React does't have tools for
 
   Unit Testing [16-20 hours]
   custom hooks
-  Build and Deployement [~5 hour]
+  Build and Deployement []
     Code-Splitting
     Lazy Loading and Suspense
     performance tuning tips

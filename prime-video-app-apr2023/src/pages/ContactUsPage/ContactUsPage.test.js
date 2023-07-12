@@ -1,5 +1,5 @@
 // AAA
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import ContactUsPage from './ContactUsPage';
 
 // Test suite
@@ -23,5 +23,41 @@ describe('ContactUsPage', () => {
     expect(emailInput).toHaveAttribute('type', 'email');
     expect(phoneInput).toHaveAttribute('type', 'tel');
     expect(submitBtn).toHaveAttribute('type', 'submit');
+  });
+
+  // negative test related to form validation
+  it('has  submit button in disabled state when fullName is empty', () => {
+    render(<ContactUsPage />);
+    // finding fullName input
+    const nameInput = screen.getByLabelText('Name');
+    // finding submit button
+    const submitBtn = screen.getByRole('button');
+
+    const mockEventObject = {
+      target: {
+        value: ''
+      }
+    };
+
+    fireEvent.change(nameInput, mockEventObject);
+    expect(submitBtn).toHaveAttribute('disabled');
+  });
+
+  // positive test  related to form validation
+  it('has submit button in enabled state when fullName is NOT empty', () => {
+    render(<ContactUsPage />);
+    // finding fullName input
+    const nameInput = screen.getByLabelText('Name');
+    // finding submit button
+    const submitBtn = screen.getByRole('button');
+
+    const mockEventObject = {
+      target: {
+        value: 'arun'
+      }
+    };
+
+    fireEvent.change(nameInput, mockEventObject);
+    expect(submitBtn).not.toHaveAttribute('disabled');
   });
 });

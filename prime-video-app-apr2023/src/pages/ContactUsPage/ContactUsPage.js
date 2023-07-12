@@ -7,6 +7,18 @@ const ContactUsPage = () => {
   const userStatus = useContext(PageContext);
   console.log(userStatus);
 
+  /* steps
+    1. read the form data on submit button click
+      1.1 stop the page refresh [DONE]
+      1.2 read the form data [DONE]
+    2. send the form data to the rest api
+      2.1 What's the REST API URL?
+      2.2 What's the Http Method?
+      2.3 What's the REST API Client? axios or fetch
+      2.4 What's the form data?
+    3. display the form submission status
+  */
+
   const [formState, setFormState] = useState({
     fullName: '',
     email: '',
@@ -133,7 +145,11 @@ const ContactUsPage = () => {
               onChange={handleChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={formState.fullName === ''}
+          >
             {formState.isSubmitting ? 'Submitting... Please wait...' : 'Submit'}
           </button>
           {formState.isSaved && (
