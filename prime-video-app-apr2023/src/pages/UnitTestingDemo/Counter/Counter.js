@@ -4,7 +4,9 @@ const Counter = () => {
   const [ticker, setTicker] = useState(0);
 
   const handleIncrement = () => {
-    setTicker(ticker + 1);
+    if (ticker < 10) {
+      setTicker(ticker + 1);
+    }
   };
 
   return (
