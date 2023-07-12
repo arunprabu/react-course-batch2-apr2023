@@ -60,4 +60,6 @@ describe('ContactUsPage', () => {
     fireEvent.change(nameInput, mockEventObject);
     expect(submitBtn).not.toHaveAttribute('disabled');
   });
+
+  // TODO: trigger the submit btn click and check whether success msg is displayed or not
 });
