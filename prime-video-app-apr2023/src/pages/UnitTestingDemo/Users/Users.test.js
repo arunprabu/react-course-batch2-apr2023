@@ -54,4 +54,19 @@ describe('Users', () => {
   });
 
   // NEGATIVE TEST SPEC == Mocking ERROR Response
+  it('[MOCKING]: renders error properly when REST API returns error', async () => {
+    // 1. prepare mock error response
+    const error = 'Error occurred';
+    // 2. Reject the http request with the above mock error response
+    // 2.1 setup mocks for axios (see before describe block)
+    // 2.2 reject the req
+    axios.get.mockRejectedValue(error);
+    // 3. Render the comp
+    render(<Users />);
+    // 4. Assert
+    const errorElement = await screen.findByText(
+      'Some Error Occurred. Try again later!'
+    );
+    expect(errorElement).toBeInTheDocument();
+  });
 });
