@@ -10,7 +10,7 @@ const Users = () => {
     axios
       .get('https://jsonplaceholder.typicode.com/users')
       .then((res) => {
-        console.log(res.data);
+        console.log(res);
         setIsLoading(false);
         setUserList(res.data);
       })
@@ -45,7 +45,7 @@ const Users = () => {
           <div className="col-md-4" key={user.id}>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">Name: {user.name}</h5>
+                <h5 className="card-title">{user.name}</h5>
                 <p className="card-text">E-Mail: {user.email}</p>
               </div>
             </div>
