@@ -9,10 +9,10 @@ const Users = () => {
   useEffect(() => {
     axios
       .get('https://jsonplaceholder.typicode.com/users')
-      .then((res) => {
+      .then((res) => { // res is obj
         console.log(res);
         setIsLoading(false);
-        setUserList(res.data);
+        setUserList(res.data); // res.data is an array
       })
       .catch((err) => {
         console.log(err);
