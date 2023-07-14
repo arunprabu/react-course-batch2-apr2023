@@ -409,7 +409,7 @@ Concepts
     Custom Hook [PENDING]
   
   AJAX calls using axios [DONE]
-  forms in React 
+  forms in React [DONE]
 
   Nested Routing / Child Routing 
 
@@ -423,7 +423,8 @@ React does't have tools for
 -----
 
   Unit Testing [16-20 hours]
-  custom hooks
+  Code coverage
+  custom hooks 
   Build and Deployement []
     Code-Splitting
     Lazy Loading and Suspense
@@ -568,7 +569,7 @@ Unit Testing Topics
       * negative test 
   10. Testing Routing [TODO]
   11. Setup and Tear Down [DONE]
-  12. Code Coverage
+  12. Code Coverage 
   
   Explain custom hooks
 
