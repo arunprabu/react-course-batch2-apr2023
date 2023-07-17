@@ -423,12 +423,13 @@ React does't have tools for
 -----
 
   Unit Testing [16-20 hours]
-  Code coverage
-  custom hooks 
-  Build and Deployement []
-    Code-Splitting
-    Lazy Loading and Suspense
-    performance tuning tips
+  Code coverage [DONE]
+  Build and Deployment [DONE]
+    generate production build (npm run build)
+    Code-Splitting [Tuesday]
+    Lazy Loading and Suspense [Tuesday]
+  custom hooks  [Tuesday]
+  performance tuning tips [Tuesday]
   and many more...
 
   Redux 
@@ -565,8 +566,9 @@ Unit Testing Topics
 
         2. using axios [DONE]
 
-      * with spies 
+      * with spies [DONE]
       * negative test 
+      * stubs (TO LEARN)
   10. Testing Routing [TODO]
   11. Setup and Tear Down [DONE]
   12. Code Coverage 

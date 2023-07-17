@@ -101,4 +101,4 @@ class RecommendedVideoList extends Component {
   }
 }
 
-export default RecommendedVideoList
+export default RecommendedVideoList;

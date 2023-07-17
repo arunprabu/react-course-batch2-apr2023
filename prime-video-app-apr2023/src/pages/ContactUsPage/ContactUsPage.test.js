@@ -62,4 +62,5 @@ describe('ContactUsPage', () => {
   });
 
   // TODO: trigger the submit btn click and check whether success msg is displayed or not
+  // render + fireEvent + mock resolve + assert
 });
