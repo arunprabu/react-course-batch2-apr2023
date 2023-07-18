@@ -5,7 +5,7 @@ import MockFragment from './MockFragment/MockFragment';
 
 const AboutUsPage = (props) => {
   return (
-    <div>
+    <>
       <h1>Let us explore a bit more React</h1>
       <p>About Fragment-like JSX-less component</p>
 
@@ -16,7 +16,7 @@ const AboutUsPage = (props) => {
 
       {/* Demo'ing runtime error thru error boundary */}
       {/* <p>{props.test()}</p> */}
-    </div>
+    </>
   );
 }
 

@@ -602,8 +602,8 @@ ReactJS - Performace Tips
   Try this awesome package
   https://bvaughn.github.io/react-virtualized/
 3. Make use of props wisely. Don't leave out unused props. 
-  (show our redux app example, 
-  in which if our app doesn't display the userId anywhere.. dont receive such a prop data)
+  (
+  if our app doesn't display the userId anywhere.. dont receive such a prop data)
   So, a bad way could be...
   const MyComp = (props) => { //bad way if all props are not used
 
@@ -614,7 +614,6 @@ ReactJS - Performace Tips
 
   }
   Also,don't pass unneccessary props. 
-  And wise idea is not to store userId in the redux store.
 
 4. Lazy Load Images 
   https://www.npmjs.com/package/react-lazy-load-image-component
@@ -641,7 +640,8 @@ ReactJS - Performace Tips
 13. Use Why did you update tool
     https://www.npmjs.com/package/@welldone-software/why-did-you-render
 14. shouldComponentUpdate lifecycle hook
-15. Learn more performance tips.. There are aplenty.
+15. Learn about useMemo() Hook
+16. Learn more performance tips.. There are aplenty.
 
 ===
 Debugging in Production
