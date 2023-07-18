@@ -431,7 +431,7 @@ React does't have tools for
     Code-Splitting [DONE]
     Lazy Loading and Suspense [DONE]
   custom hooks  [Tuesday]
-  performance tuning tips [Tuesday]
+  performance tuning tips [Done]
   and many more...
 
   Redux 
