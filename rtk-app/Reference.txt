@@ -1,0 +1,31 @@
+
+Any to Any Comp Commn (2015-26)
+State Management in React Apps
+
+  1. ReactJS + Flux [Not Maintained anymore]
+      * too much complexity 
+
+  2. ReactJS + Redux (2016 till today)    ==> a.k.a classic redux [LEARN SEPARATELY]
+      * complex
+      Middleware Integrations (choose anyone)
+        1. redux-thunk (38-40 steps)
+        2. redux-saga (46 steps)
+  
+  3. ReactJS + ContextAPI (Hooks)  (2019 till today) (Demo'd in prime-video-app)
+      * Easier 
+
+  4. ReactJS + Redux-Toolkit (Redux, React-Redux, Redux-thunk)   => a.k.a modern redux 
+      * Easier 
+      Middleware Integrations (choose anyone)
+        1. redux-thunk 
+        2. redux-saga 
+
+
+======
+How to create JS based react-toolkit project?
+  npx create-react-app my-app --template redux 
+
+How to create TS based react-toolkit project?
+  npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+
+

@@ -231,6 +231,7 @@ Sharing the data between components a.k.a Cross Component Communication
 
   2. Child to Parent Component Communication [TODO]
       Using Props with callback function and event
+      Refer: RecommendedVideoList & RecommendedVideo
 
   3. Any to Any Component Communication
       3.1 Using React Context API (or) [after the year 2019 - ReactJS v 16.8]
@@ -413,7 +414,7 @@ Concepts
   AJAX calls using axios [DONE]
   forms in React [DONE]
 
-  Nested Routing / Child Routing 
+  Nested Routing / Child Routing [DONE]
 
 
 React does't have tools for 
@@ -424,15 +425,14 @@ React does't have tools for
   4. Forms and Validations (so, use react-hook-form [RECOMMENDED] or formik )
 -----
 
-  Unit Testing [16-20 hours]
+  Unit Testing [16-20 hours] [DONE]
   Code coverage [DONE]
   Build and Deployment [DONE]
     generate production build (npm run build)
     Code-Splitting [DONE]
     Lazy Loading and Suspense [DONE]
-  custom hooks  [Tuesday]
+  custom hooks  [DONE]
   performance tuning tips [Done]
-  and many more...
 
   Redux 
 
@@ -647,3 +647,5 @@ ReactJS - Performace Tips
 Debugging in Production
 ---
 https://medium.com/@baphemot/intro-to-debugging-reactjs-applications-67cf7a50b3dd
+
+
