@@ -33,37 +33,37 @@ const Users = () => {
         <h2>List Users</h2>
         <div className="row">
           <div className="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">John</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">John</h5>
+                <h6 className="card-subtitle mb-2 text-body-secondary">
                   E-Mail: j@k.com
                 </h6>
-                <p class="card-text">Phone: 3245678</p>
+                <p className="card-text">Phone: 3245678</p>
               </div>
             </div>
           </div>
 
           <div className="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">John</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">John</h5>
+                <h6 className="card-subtitle mb-2 text-body-secondary">
                   E-Mail: j@k.com
                 </h6>
-                <p class="card-text">Phone: 3245678</p>
+                <p className="card-text">Phone: 3245678</p>
               </div>
             </div>
           </div>
 
           <div className="col-md-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">John</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">John</h5>
+                <h6 className="card-subtitle mb-2 text-body-secondary">
                   E-Mail: j@k.com
                 </h6>
-                <p class="card-text">Phone: 3245678</p>
+                <p className="card-text">Phone: 3245678</p>
               </div>
             </div>
           </div>
