@@ -1,3 +1,10 @@
+// core stuff here 
+/* 
+  1. initial state for the store of this feature,
+  2. reducer functions 
+  3. actions associated with reducer fns
+*/
+
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { fetchCount } from './counterAPI';
 
