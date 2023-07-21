@@ -4,6 +4,8 @@ import { Provider } from 'react-redux'; // official react-redux binding
 import { store } from './app/store'; // fetching store data
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './index.css';
 
 const container = document.getElementById('root');

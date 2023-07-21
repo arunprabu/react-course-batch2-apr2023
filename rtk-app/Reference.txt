@@ -20,6 +20,8 @@ State Management in React Apps
         1. redux-thunk 
         2. redux-saga 
 
+  
+
 
 ======
 How to create JS based react-toolkit project?
@@ -27,5 +29,33 @@ How to create JS based react-toolkit project?
 
 How to create TS based react-toolkit project?
   npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+
+
+3 Important Concepts of Redux 
+----
+  Store
+    the whole state of the app.
+  
+  Action
+    what happens in the app 
+
+  Reducer 
+    updates the store based on the action happened 
+
+  
+3 Principles of Redux 
+-----
+  1. There should be single source of truth for the whole app. i.e Store
+      (it should be an object)
+  2. The only way to update the state is by dispatching an action 
+      that tells what happened in the app 
+  3. Reducer should update the store based on action occurred 
+      and also based on previous and next state 
+
+
+createSlice({}) 
+  * needs name 
+  * initial state object 
+  * also the reducers fns  
 
 
