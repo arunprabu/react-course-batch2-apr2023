@@ -5,7 +5,9 @@
   3. actions associated with reducer fns
 */
 
-const { createSlice } = require("@reduxjs/toolkit")
+import axios from "axios"
+
+const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit")
 
 const initialState = {
   isLoading: false,
@@ -14,6 +16,33 @@ const initialState = {
   user: {},
   status: 'idle'
 }
+
+//  rest api call to add User thru axios 
+export const addUserAsync = createAsyncThunk(
+  "users/addUsers", // action type prefix 
+  async (formData) => {
+    const response = await axios.post(
+      "https://jsonplaceholder.typicode.com/users",
+      formData
+    );
+    // The value we return becomes the action payload
+    // console.log(response.data);
+    return response.data;
+  }
+)
+
+//  rest api call to fetch Users thru axios 
+export const fetchUsersAsync = createAsyncThunk(
+  "users/fetchUsers", // action type prefix 
+  async () => {
+    const response = await axios.get(
+      'https://jsonplaceholder.typicode.com/users'
+    );
+    // The value we return becomes the action payload
+    // console.log(response.data);
+    return response.data;
+  }
+)
 
 // Let's create slice
 // What's a slice? 
@@ -24,7 +53,7 @@ const initialState = {
   and automatically generates action creators and action types 
   that correspond to the reducers and state.
 */
-const usersSlice = createSlice({
+export const usersSlice = createSlice({
   name: "users",
   initialState,
   // Let's have the obj full of reducer functions
@@ -35,5 +64,57 @@ const usersSlice = createSlice({
     fetchUsers: (state) => {
       debugger;
     }
+  },
+  // extraReducers: A callback that receives a builder object to 
+  // define case reducers 
+  // via calls to builder.addCase(actionCreatorOrType, reducer).
+  // The extrareducers field lets the slice handle actions defined elsewhere
+  // including actions dispatched from other slices
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchUsersAsync.pending, (state) => {
+        // before the promise call either fullfilled/rejected
+        // update store
+        state.isLoading = true;
+        state.isError = false;
+        state.status = "loading";
+      })
+      .addCase(fetchUsersAsync.fulfilled, (state, action) => {
+        // console.log(state);
+        // after the promise is fullfilled
+        // update store
+        state.isLoading = false;
+        state.isError = false;
+        state.status = "idle";
+        state.userList = action.payload;
+      })
+      .addCase(fetchUsersAsync.rejected, (state) => {
+        // console.log(state);
+        // after the promise is rejected
+        // update store
+        state.isLoading = false;
+        state.isError = true;
+        state.status = "Some Error Occurred. Try again later";
+      })
+      .addCase(addUserAsync.pending, (state) => {
+        // before the promise call either fullfilled/rejected
+        // update store
+        state.isLoading = true;
+        state.isError = false;
+        state.status = "loading";
+      })
+      .addCase(addUserAsync.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.status = "idle";
+        state.userList = [...state.userList, action.payload];
+      })
+      .addCase(addUserAsync.rejected, (state) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.status = 'Unable to Save Data. Try again later.';
+      });
   }
 });
+
+export default usersSlice.reducer;
