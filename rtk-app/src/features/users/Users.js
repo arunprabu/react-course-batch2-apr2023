@@ -20,12 +20,6 @@ const Users = () => {
 
   console.log("2. Program Ended with Initial Rendering");
 
-  const handleSubmit = () => {
-    // we need to access form data
-    const form = { name: "arun", email: "a@b.com", phone: "234567" };
-    dispatch(addUserAsync(form));
-  }
-
   if (users.isLoading){
     return (<div className="spinner-border"></div>)
   }
@@ -39,7 +33,7 @@ const Users = () => {
       <h1>User Management</h1>
       <div className="col-md-4">
         <h2>Add User</h2>
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="mb-3">
             <label htmlFor="nameInput" className="form-label">
               Name

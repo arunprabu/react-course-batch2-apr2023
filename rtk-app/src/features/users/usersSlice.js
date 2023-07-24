@@ -17,20 +17,6 @@ const initialState = {
   status: 'idle'
 }
 
-//  rest api call to add User thru axios 
-export const addUserAsync = createAsyncThunk(
-  "users/addUsers", // action type prefix 
-  async (formData) => {
-    const response = await axios.post(
-      "https://jsonplaceholder.typicode.com/users",
-      formData
-    );
-    // The value we return becomes the action payload
-    // console.log(response.data);
-    return response.data;
-  }
-)
-
 //  rest api call to fetch Users thru axios 
 export const fetchUsersAsync = createAsyncThunk(
   "users/fetchUsers", // action type prefix 
@@ -95,24 +81,6 @@ export const usersSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.status = "Some Error Occurred. Try again later";
-      })
-      .addCase(addUserAsync.pending, (state) => {
-        // before the promise call either fullfilled/rejected
-        // update store
-        state.isLoading = true;
-        state.isError = false;
-        state.status = "loading";
-      })
-      .addCase(addUserAsync.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.isError = false;
-        state.status = "idle";
-        state.userList = [...state.userList, action.payload];
-      })
-      .addCase(addUserAsync.rejected, (state) => {
-        state.isLoading = false;
-        state.isError = true;
-        state.status = 'Unable to Save Data. Try again later.';
       });
   }
 });
