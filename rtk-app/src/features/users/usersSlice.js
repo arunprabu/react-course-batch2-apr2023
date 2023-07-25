@@ -13,7 +13,6 @@ const initialState = {
   isLoading: false,
   isError: false,
   userList: [],
-  user: {},
   status: 'idle'
 }
 
@@ -26,9 +25,21 @@ export const fetchUsersAsync = createAsyncThunk(
     );
     // The value we return becomes the action payload
     // console.log(response.data);
-    return response.data;
+    return response.data; // this will be payload of action obj
   }
 )
+
+// rest api call to add user thru axios 
+export const addUserAsync = createAsyncThunk(
+  "users/addUser",
+  async (addUserForm) => {
+    const response = await axios.post(
+      "https://jsonplaceholder.typicode.com/users", addUserForm
+    );
+    console.log(response.data);
+    return response.data;
+  }
+);
 
 // Let's create slice
 // What's a slice? 
@@ -44,12 +55,8 @@ export const usersSlice = createSlice({
   initialState,
   // Let's have the obj full of reducer functions
   reducers: {
-    addUser: (state) => { // state is data from store of this feature
-      debugger;
-    },
-    fetchUsers: (state) => {
-      debugger;
-    }
+    // if you want to update store locally without connecting to rest api 
+    // write the logic here - this is meant for sync calls
   },
   // extraReducers: A callback that receives a builder object to 
   // define case reducers 
@@ -57,30 +64,34 @@ export const usersSlice = createSlice({
   // The extrareducers field lets the slice handle actions defined elsewhere
   // including actions dispatched from other slices
   extraReducers: (builder) => {
+    // if you want to update the store by connecting to rest api
+    // write logic here - this is meant for async calls
     builder
       .addCase(fetchUsersAsync.pending, (state) => {
-        // before the promise call either fullfilled/rejected
-        // update store
+        console.log(state); // state is store data for this feature
+        // Let's update store from here
         state.isLoading = true;
-        state.isError = false;
-        state.status = "loading";
       })
       .addCase(fetchUsersAsync.fulfilled, (state, action) => {
-        // console.log(state);
-        // after the promise is fullfilled
-        // update store
         state.isLoading = false;
-        state.isError = false;
-        state.status = "idle";
         state.userList = action.payload;
       })
-      .addCase(fetchUsersAsync.rejected, (state) => {
-        // console.log(state);
-        // after the promise is rejected
-        // update store
+      .addCase(fetchUsersAsync.rejected, (state, action) => {
         state.isLoading = false;
         state.isError = true;
-        state.status = "Some Error Occurred. Try again later";
+        state.status = "Unable to fetch users. Please try after sometime!";
+      })
+      .addCase(addUserAsync.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addUserAsync.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.userList = [...state.userList, action.payload];
+      })
+      .addCase(addUserAsync.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.status = 'Unable to Add';
       });
   }
 });
