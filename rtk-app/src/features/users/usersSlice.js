@@ -36,7 +36,7 @@ export const addUserAsync = createAsyncThunk(
     const response = await axios.post(
       "https://jsonplaceholder.typicode.com/users", addUserForm
     );
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   }
 );
@@ -68,7 +68,7 @@ export const usersSlice = createSlice({
     // write logic here - this is meant for async calls
     builder
       .addCase(fetchUsersAsync.pending, (state) => {
-        console.log(state); // state is store data for this feature
+        // console.log(state); // state is store data for this feature
         // Let's update store from here
         state.isLoading = true;
       })

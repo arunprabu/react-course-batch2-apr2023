@@ -11,9 +11,9 @@ const Header = () => {
           Redux Toolkit App Demo
         </Link>
       </div>
-      <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <ul className="nav nav-pills col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li>
-          <NavLink to="/" className="nav-link px-2 link-secondary">
+          <NavLink to="/" className="nav-link px-2">
             Home
           </NavLink>
         </li>
@@ -31,6 +31,9 @@ const Header = () => {
           <NavLink to="/products" className="nav-link px-2">
             Products
           </NavLink>
+        </li>
+        <li>
+          <Link to='/cart' className="btn btn-danger">Cart (0)</Link>
         </li>
       </ul>
     </header>

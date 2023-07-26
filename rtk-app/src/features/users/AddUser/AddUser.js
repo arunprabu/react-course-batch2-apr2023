@@ -16,7 +16,6 @@ const AddUser = () => {
       email: 'a@b.com',
       phone: 3425678
     }
-    console.log(addUserForm);
 
     dispatch(addUserAsync(addUserForm));
   }

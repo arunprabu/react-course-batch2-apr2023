@@ -12,10 +12,7 @@ const Users = () => {
     return state.users;
   });
 
-  console.log(usersState);
-
   const dispatch = useDispatch();
-  console.log(dispatch);
 
   useEffect(() => {
     dispatch(fetchUsersAsync());
