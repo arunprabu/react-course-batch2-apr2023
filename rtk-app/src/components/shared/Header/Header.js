@@ -1,6 +1,12 @@
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+  const productsState = useSelector((state) => {
+    return state.products;
+  });
+  console.log(productsState.cartItems);
+
   return (
     <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
       <div className="col-md-3 mb-2 mb-md-0">
@@ -33,7 +39,9 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
-          <Link to='/cart' className="btn btn-danger">Cart (0)</Link>
+          <Link to="/cart" className="btn btn-danger">
+            Cart ({productsState.cartItems.length})
+          </Link>
         </li>
       </ul>
     </header>
