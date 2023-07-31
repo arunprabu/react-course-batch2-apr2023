@@ -649,3 +649,51 @@ Debugging in Production
 https://medium.com/@baphemot/intro-to-debugging-reactjs-applications-67cf7a50b3dd
 
 
+
+
+Important update to all Participants
+-----------
+All of you MUST have the proper package.json with code coverage threshold configuration. 
+Refer package.json (https://github.com/arunprabu/react-course-dec-2022/blob/master/youtube-plus-react-app/package.json)
+for necessary changes related to unit testing (Refer: lines 21 to 40) 
+and incorporate in your project. Code coverage Threshold is: 82%
+Without proper package.json if anybody is presenting I will reject the project. I will not review it.
+
+Capstone Submission Checklist
+----------
+  1. Ensure you complete everything as per the instructions I gave you. 
+     Do not cite document as reason for your implementation.
+  2. Have Properly formatted code (25 marks)
+  3. Have necessary code comments (25 marks)
+  4. Follow proper naming, coding conventions (25 marks)
+  5. Keep minimal console.logs 
+  6. Have 0 console errors (25 marks)
+  7. Have 0 console warnings 
+  8. Must have 82% code coverage
+  9. All functionalities must be in working state
+  10. Lazy loading implemented (for at least 1 page)
+  11. Unit test must have the following 
+      * every component should have proper test file 
+          (failure to have a test file even for one component will be considered as incomplete project)
+      * router test
+          Refer: https://www.youtube.com/watch?v=8wsrIbvdnzU
+      * mocking api calls with resolve and reject.
+      * prop testing in all components that are working with props
+      * form validation positive and negative test
+      * at least one snapshot test
+  12. Handle 404
+  
+
+-----------
+How to take a build and submit the project?
+  1. Generate code coverage report
+      npm run test -- --coverage --watchAll
+  2. Generate build
+      npm run build
+  3. Zip your entire project without node_modules
+  4. rename the folder 'empid-yourname-spark-clothing-app.zip'
+  4. Upload in the given location
+  5. Send a mail to Revathy
+
+--------------------------
+
